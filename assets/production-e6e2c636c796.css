@@ -241,3 +241,179 @@ html:not(.js) .js-image{display:block}html:not(.js) .menu-toggle{display:none}ht
 .v46-next-collection{--safe-next-gutter:max(50px,calc((100vw - 1440px)/2));padding-inline-start:max(var(--safe-next-gutter),env(safe-area-inset-left,0px));padding-inline-end:max(var(--safe-next-gutter),env(safe-area-inset-right,0px))}
 @media(max-width:1099px){.v46-next-collection{--safe-next-gutter:35px}}
 @media(max-width:760px){.v42-visual-disclosure{--safe-disclosure-edge:15px;left:max(15px,env(safe-area-inset-left,0px))}.photo-tag{--safe-photo-edge:16px}.v46-next-collection{--safe-next-gutter:20px}}
+
+
+/* STONISCE V4.6 Mobile — phone layout, kept separate from the approved design. */
+.v46-mobile-contact,
+.v46-mobile-contact[hidden] { display: none; }
+
+@media (max-width: 760px) {
+  :root { --header-height: 68px; }
+  .header-inner { min-height: 68px; }
+  .site-nav a {
+    font-size: 24px;
+    line-height: 1.2;
+    padding-block: 14px;
+    min-height: 56px;
+  }
+  .menu-toggle, .lang-btn, [data-inquiry], .v46-dialog button {
+    touch-action: manipulation;
+  }
+
+  .v42-manifest { min-height: 0; }
+  .v42-manifest-inner { padding-block: 34px 30px; }
+  .v42-manifest-top { font-size: 9px; line-height: 1.5; gap: 6px; }
+  .v42-manifest h1 {
+    font-size: clamp(43px, 12.8vw, 62px);
+    line-height: 1.01;
+    margin-block: 25px 20px;
+    text-wrap: balance;
+  }
+  .v42-manifest p { font-size: 18px; line-height: 1.5; }
+  .v42-scroll { margin-top: 20px; min-height: 44px; }
+
+  .v46-collection-index {
+    gap: 24px;
+    scrollbar-width: none;
+    scroll-padding-inline: 20px;
+    overscroll-behavior-x: contain;
+  }
+  .v46-collection-index::-webkit-scrollbar { display: none; }
+  .v46-collection-index a { min-height: 48px; flex-shrink: 0; }
+
+  .v42-panel, .v42-panel:nth-child(even) {
+    grid-template-rows: auto auto;
+    scroll-margin-top: calc(var(--header-height) + 48px);
+  }
+  .v42-media { height: auto; aspect-ratio: 4 / 3; }
+  .v42-panel-reliefs .v42-media { aspect-ratio: 16 / 9; }
+  .v42-panel-cladding-flooring .v42-media,
+  .v42-panel-architectural-objects .v42-media { aspect-ratio: 3 / 2; }
+  .v42-panel-content { min-height: 0; padding-block: 30px 36px; }
+  .v42-number { margin-bottom: 18px; }
+  .v42-panel h2 {
+    font-size: clamp(43px, 11.5vw, 62px);
+    line-height: 1.02;
+    margin-block: 18px;
+    text-wrap: balance;
+  }
+  .v42-panel p { font-size: 19px; line-height: 1.5; margin-bottom: 24px; }
+  .v42-picture-label { font-size: 9px; letter-spacing: .06em; }
+
+  [data-preview-page]:not([data-preview-page="index"]) .collection-intro {
+    padding-block: 28px 30px;
+  }
+  [data-preview-page]:not([data-preview-page="index"]) .collection-heading {
+    font-size: clamp(42px, 11.6vw, 64px);
+    line-height: 1.02;
+    margin-block: 24px 20px;
+    text-wrap: balance;
+    overflow-wrap: normal;
+  }
+  .collection-topline { gap: 12px; }
+  [data-preview-page]:not([data-preview-page="index"]) .collection-deck p {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+  .collection-deck .text-link { min-height: 44px; }
+  [data-preview-page]:not([data-preview-page="index"]) .collection-lead {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  .v42-page-reliefs .collection-lead { aspect-ratio: 16 / 9 !important; }
+  .v42-page-cladding-flooring .collection-lead,
+  .v42-page-architectural-objects .collection-lead { aspect-ratio: 3 / 2 !important; }
+  .v42-page-rockface .collection-lead { aspect-ratio: 1 / 1 !important; }
+  .project-statement { padding-block: 56px; }
+  .project-statement .section-heading,
+  .v46-gallery-intro .section-heading {
+    font-size: clamp(40px, 10.5vw, 58px);
+    text-wrap: balance;
+  }
+  .statement-grid p { font-size: 19px; line-height: 1.6; }
+  [data-preview-page]:not([data-preview-page="index"]) .collection-gallery {
+    padding-block: 50px 58px;
+  }
+  .preview-meta strong { font-size: 28px !important; line-height: 1.12; }
+  .preview-meta p { font-size: 17px !important; }
+  .preview-card { scroll-margin-block: calc(var(--header-height) + 18px) 90px; }
+  .v46-next-collection strong { font-size: clamp(25px, 6.8vw, 34px); }
+
+  .v46-dialog-close {
+    position: sticky;
+    top: 12px;
+    right: auto;
+    margin: 12px 12px -56px auto;
+  }
+  .v46-lightbox-info { display: flex; flex-direction: column; align-items: stretch; }
+  .v46-lightbox-controls { order: -1; margin: 0 0 24px; justify-content: space-between; }
+  .v46-lightbox-controls button { width: 48px; height: 48px; }
+  .v46-lightbox-info h2 { font-size: 34px; }
+  .v46-inquiry .button { white-space: normal; line-height: 1.5; }
+
+  .v46-mobile-contact:not([hidden]) {
+    position: fixed;
+    z-index: 45;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px max(20px, env(safe-area-inset-right, 0px))
+      calc(10px + env(safe-area-inset-bottom, 0px))
+      max(20px, env(safe-area-inset-left, 0px));
+    background: #f8f5eef7;
+    color: #29312b;
+    border-top: 1px solid #b7a48d80;
+    box-shadow: 0 -5px 25px #19251b12;
+    backdrop-filter: blur(12px);
+  }
+  .v46-mobile-contact-brand { font: 16px/1.2 var(--serif); letter-spacing: .13em; }
+  .v46-mobile-contact-brand small {
+    display: block;
+    font: 9px/1.5 var(--sans);
+    letter-spacing: .04em;
+    margin-top: 4px;
+  }
+  .v46-mobile-contact .button {
+    min-height: 46px;
+    min-width: 0;
+    margin: 0;
+    padding: 13px 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    font: 500 11px/1.3 var(--sans);
+    letter-spacing: .02em;
+    text-transform: none;
+    color: #f8f5ee;
+    background: #29372d;
+    border: 1px solid #29372d;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid,
+  .v42-page-reliefs .gallery-grid,
+  .v42-page-columns-profiles .gallery-grid,
+  .v42-page-rockface .gallery-grid,
+  .v42-page-cladding-flooring .gallery-grid,
+  .v42-page-architectural-objects .gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+  .gallery-grid .preview-img img { height: auto !important; aspect-ratio: 4 / 3; }
+  .v42-page-architectural-objects .gallery-grid .preview-img img { aspect-ratio: 5 / 4; }
+  .v42-page-architectural-objects .preview-meta strong { font-size: 28px !important; }
+  .v42-page-architectural-objects .preview-meta p { font-size: 17px !important; }
+}
+
+@media (max-width: 360px) {
+  .v46-mobile-contact:not([hidden]) { padding-inline: 14px; gap: 10px; }
+  .v46-mobile-contact-brand { font-size: 14px; letter-spacing: .1em; }
+  .v46-mobile-contact .button { padding-inline: 12px; gap: 10px; font-size: 10px; }
+}

@@ -57,3 +57,75 @@ function updateInquiry(){const entry=config.collections[inquiryRoute],name=entry
 document.getElementById('project-form').addEventListener('input',updateInquiry);document.getElementById('project-form').addEventListener('submit',event=>event.preventDefault());
 viewportMetrics();setMenu(false,false);updateScroll();if(location.hash)requestAnimationFrame(()=>scrollSection(currentSection()));
 })();
+
+
+/* Phone-specific enhancement. Native navigation and inquiry handling stay in production.js. */
+(() => {
+  'use strict';
+  const bar = document.querySelector('.v46-mobile-contact');
+  const index = document.querySelector('.v46-collection-index');
+  const phone = matchMedia('(max-width: 760px)');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  if (!bar) return;
+  let pending = false;
+  let activeSection = '';
+  let launchedFromBar = false;
+  let dismissedByUser = false;
+
+  function refresh() {
+    pending = false;
+    const blocked = document.body.classList.contains('menu-open') ||
+      document.body.classList.contains('dialog-open');
+    const contactVisible = [...document.querySelectorAll('.contact-banner, .site-footer')]
+      .some(element => {
+        const bounds = element.getBoundingClientRect();
+        return bounds.top < innerHeight - 70 && bounds.bottom > 0;
+      });
+    const visible = phone.matches && scrollY > 240 && !blocked && !contactVisible;
+    bar.hidden = !visible;
+    bar.inert = !visible;
+
+    const active = index?.querySelector('a.is-active');
+    if (phone.matches && active && active.hash !== activeSection) {
+      activeSection = active.hash;
+      const left = active.offsetLeft - (index.clientWidth - active.offsetWidth) / 2;
+      index.scrollTo({left: Math.max(0, left), behavior: reduced.matches ? 'instant' : 'smooth'});
+    }
+  }
+  function schedule() {
+    if (!pending) { pending = true; requestAnimationFrame(refresh); }
+  }
+  const inquiry = document.getElementById('project-dialog');
+  bar.addEventListener('click', event => {
+    if (event.target.closest('[data-inquiry]')) {
+      launchedFromBar = true;
+      dismissedByUser = false;
+    }
+  });
+  inquiry.addEventListener('cancel', () => { dismissedByUser = true; });
+  inquiry.addEventListener('click', event => {
+    if (event.target.closest('[data-close-dialog]')) dismissedByUser = true;
+    if (event.target === inquiry) {
+      const bounds = inquiry.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right ||
+          event.clientY < bounds.top || event.clientY > bounds.bottom) dismissedByUser = true;
+    }
+  });
+  inquiry.addEventListener('close', () => {
+    const restore = launchedFromBar && dismissedByUser;
+    launchedFromBar = false;
+    dismissedByUser = false;
+    if (!restore) return;
+    refresh();
+    if (!bar.hidden) bar.querySelector('a').focus({preventScroll: true});
+  });
+  window.addEventListener('scroll', schedule, {passive: true});
+  window.addEventListener('resize', schedule, {passive: true});
+  window.addEventListener('pageshow', schedule);
+  phone.addEventListener('change', schedule);
+  new MutationObserver(schedule).observe(document.body, {attributes: true, attributeFilter: ['class']});
+  if (index) new MutationObserver(schedule).observe(index, {
+    subtree: true, attributes: true, attributeFilter: ['class']
+  });
+  refresh();
+})();
