@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://stoniscemarble.com/tr/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/tr/reliefs/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/reliefs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/reliefs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/reliefs/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/tr/columns-profiles/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/columns-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/columns-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/columns-profiles/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/tr/rockface/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/rockface/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/rockface/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/rockface/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/tr/cladding-flooring/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/cladding-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/cladding-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/cladding-flooring/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/tr/architectural-objects/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/architectural-objects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/architectural-objects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/architectural-objects/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/en/reliefs/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/reliefs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/reliefs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/reliefs/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/en/columns-profiles/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/columns-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/columns-profiles/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/columns-profiles/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/en/rockface/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/rockface/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/rockface/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/rockface/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/en/cladding-flooring/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/cladding-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/cladding-flooring/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/cladding-flooring/"/>
+  </url>
+  <url>
+    <loc>https://stoniscemarble.com/en/architectural-objects/</loc>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://stoniscemarble.com/tr/architectural-objects/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://stoniscemarble.com/en/architectural-objects/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://stoniscemarble.com/en/architectural-objects/"/>
+  </url>
+</urlset>

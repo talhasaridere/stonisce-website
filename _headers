@@ -1,0 +1,8 @@
+/assets/*.webp
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+/assets/production-*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/production-*.js
+  Cache-Control: public, max-age=31536000, immutable
