@@ -105,7 +105,7 @@
 [data-preview-page]:not([data-preview-page="index"]) .process-grid p{font-size:17px;line-height:1.55}
 [data-preview-page]:not([data-preview-page="index"]) .gallery-grid{gap:26px}
 [data-preview-page]:not([data-preview-page="index"]) .preview-img img{height:clamp(220px,26vw,350px);object-fit:cover;transition:transform .5s ease;filter:saturate(.93)}
-[data-preview-page]:not([data-preview-page="index"]) .preview-img:after{content:'↗';pointer-events:none;position:absolute;right:15px;bottom:15px;color:#fff9ee;background:rgba(24,28,25,.7);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:20px var(--v42-serif);opacity:.93}
+[data-preview-page]:not([data-preview-page="index"]) .preview-img:after{content:"";pointer-events:none;position:absolute;right:15px;bottom:15px;color:#fff9ee;background:rgba(24,28,25,.7);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:20px var(--v42-serif);opacity:.93}
 [data-preview-page]:not([data-preview-page="index"]) .preview-meta{padding:19px 2px 24px}
 [data-preview-page]:not([data-preview-page="index"]) .preview-meta strong{font-size:clamp(23px,2.2vw,32px)}
 [data-preview-page]:not([data-preview-page="index"]) .preview-meta p{font-size:16px;line-height:1.5}
@@ -416,4 +416,35 @@ html:not(.js) .js-image{display:block}html:not(.js) .menu-toggle{display:none}ht
   .v46-mobile-contact:not([hidden]) { padding-inline: 14px; gap: 10px; }
   .v46-mobile-contact-brand { font-size: 14px; letter-spacing: .1em; }
   .v46-mobile-contact .button { padding-inline: 12px; gap: 10px; font-size: 10px; }
+}
+
+
+/* Direction icons share the same vector drawing on mobile and desktop. */
+.stonisce-arrow {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  vertical-align: -.12em;
+  overflow: visible;
+  pointer-events: none;
+}
+.v42-explore .stonisce-arrow { width: 28px; height: 28px; }
+.v42-scroll .stonisce-arrow { width: 24px; height: 28px; }
+.button > .stonisce-arrow,
+.button > span > .stonisce-arrow,
+.text-link > .stonisce-arrow { width: 18px; height: 18px; }
+.v46-next-collection > a:first-child .stonisce-arrow { width: 16px; height: 16px; }
+.v46-next-collection strong .stonisce-arrow { width: .72em; height: .72em; }
+.v46-lightbox-controls .stonisce-arrow { width: 22px; height: 22px; }
+.v46-mobile-contact .button .stonisce-arrow { width: 16px; height: 16px; }
+[data-preview-page]:not([data-preview-page="index"]) .preview-img::after { content: ""; }
+.preview-img > .stonisce-preview-arrow {
+  position: absolute;
+  right: 23px;
+  bottom: 23px;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  color: #fff9ee;
 }
